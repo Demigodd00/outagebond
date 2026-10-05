@@ -9,6 +9,7 @@ import { useWallet } from "./WalletProvider";
 
 const routes = [
   { href: "/", label: "Overview" },
+  { href: "/tour", label: "Guided tour" },
   { href: "/coverage/new", label: "Create coverage" },
   { href: "/status", label: "Protocol status" },
 ];

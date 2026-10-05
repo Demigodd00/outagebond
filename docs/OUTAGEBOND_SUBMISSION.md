@@ -3,6 +3,7 @@
 ## Open the product
 
 - [Live app](https://outagebond.vercel.app)
+- [Guided live-record tour](https://outagebond.vercel.app/tour)
 - [Finalized protocol status](https://outagebond.vercel.app/status)
 - [Policy guide](https://outagebond.vercel.app/how-it-works)
 - [StudioNet contract](https://explorer-studio.genlayer.com/address/0x2893BfB51B80A3ABEE168732f1B3bF86Cde08082)
@@ -14,6 +15,10 @@
 Use the dedicated repository as the Portal's required GitHub Repository evidence. The portfolio-to-standalone extraction did not change or redeploy the contract; [repository provenance](REPOSITORY_MIGRATION.md) explains the preserved historical commit and CI references.
 
 No wallet is needed to inspect coverage, claim evidence, the consensus verdict, or protocol counters. A compatible browser wallet is needed to send writes on StudioNet chain 61999; the app requests that chain explicitly. StudioNet GEN has no monetary value.
+
+## Steward-guided path
+
+Start at the [five-step guided tour](https://outagebond.vercel.app/tour) from the homepage or primary navigation. It opens each public record in a new tab and explains what to inspect, while preserving progress in the tour. No wallet or transaction is required. Follow coverage terms (`ob-4`), exact claim and two readings (`obc-2`), consensus verdict, native payout journal, then the short (`obc-3`) and unavailable-source (`obc-4`) outcomes. The tour distinguishes recorded synthetic fixtures from a real outage and does not claim that its two report hosts are independently owned.
 
 ## Why GenLayer is essential
 

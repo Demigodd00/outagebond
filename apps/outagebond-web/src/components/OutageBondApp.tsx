@@ -33,7 +33,7 @@ export default function OutageBondApp() {
         <p className="eyebrow"><span className="pulse-dot" />PUBLIC INCIDENTS · SETTLED ON GENLAYER</p>
         <h1>When service<br /><em>goes dark.</em></h1>
         <p className="hero-summary">Providers lock service credits in public. A customer submits a historical outage with two independent reports. GenLayer validators compare the evidence and the compensation rule.</p>
-        <div className="hero-actions"><Link className="button button-primary button-large" href="/coverage/new">Create coverage <span>↗</span></Link><a className="button button-secondary button-large" href="#coverage">Explore coverage</a></div>
+        <div className="hero-actions"><Link className="button button-primary button-large" href="/tour">Take the guided tour <span>↗</span></Link><Link className="button button-secondary button-large" href="/coverage/new">Create coverage</Link></div>
         <p className="environment-note">{CONTRACT_READY ? "Connected to the configured StudioNet contract" : "Preview mode · transactions remain disabled until deployment"}</p>
       </div>
       <div className="hero-visual" aria-label="Two independent outage reports converging on a compensation decision">
@@ -71,7 +71,7 @@ export default function OutageBondApp() {
     </section>
 
     <section className="how-grid">
-      <div><p className="eyebrow">THE CLAIM FLOW</p><h2>Make outages<br />settle on evidence.</h2><p>Coverage rules and collateral are committed before an incident. The claim keeps its UTC window and both report links fixed while validators independently extract the facts.</p><Link href="/how-it-works" className="text-link">Read how it works ↗</Link></div>
+      <div><p className="eyebrow">THE CLAIM FLOW</p><h2>Make outages<br />settle on evidence.</h2><p>Coverage rules and collateral are committed before an incident. The claim keeps its UTC window and both report links fixed while validators independently extract the facts.</p><Link href="/tour" className="text-link">Walk through the live records ↗</Link><br /><Link href="/how-it-works" className="text-link">Read how it works ↗</Link></div>
       <div className="flow-list"><div><span>01</span><p><strong>Provider registers coverage</strong><small>Collateral, service, region, minimum duration and payout are fixed onchain.</small></p></div><div><span>02</span><p><strong>Beneficiary submits two sources</strong><small>One service report and a second report from a different public host.</small></p></div><div><span>03</span><p><strong>Anyone calls attest()</strong><small>Validators re-fetch both pages and must agree on the derived eligibility result.</small></p></div><div><span>04</span><p><strong>Beneficiary collects</strong><small>Eligible payouts remain reserved for 30 days, then can be returned if unclaimed.</small></p></div></div>
     </section>
   </>;

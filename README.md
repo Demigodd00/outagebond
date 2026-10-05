@@ -4,7 +4,7 @@
 
 GenLayer-native service-outage bonds with validator-verified claim eligibility and native test-GEN payouts.
 
-[Live app](https://outagebond.vercel.app) · [Reviewer guide](docs/OUTAGEBOND_SUBMISSION.md) · [StudioNet contract](https://explorer-studio.genlayer.com/address/0x2893BfB51B80A3ABEE168732f1B3bF86Cde08082) · [CI](https://github.com/Demigodd00/outagebond/actions/workflows/outagebond.yml)
+[Live app](https://outagebond.vercel.app) · [Guided tour](https://outagebond.vercel.app/tour) · [Reviewer guide](docs/OUTAGEBOND_SUBMISSION.md) · [StudioNet contract](https://explorer-studio.genlayer.com/address/0x2893BfB51B80A3ABEE168732f1B3bF86Cde08082) · [CI](https://github.com/Demigodd00/outagebond/actions/workflows/outagebond.yml)
 
 ## What it does
 
@@ -19,6 +19,7 @@ The contract rejects uncovered intervals, threshold-straddling evidence, cross-d
 | Item | Link |
 | --- | --- |
 | Live app | https://outagebond.vercel.app |
+| Read-only guided tour | https://outagebond.vercel.app/tour |
 | Finalized protocol status | https://outagebond.vercel.app/status |
 | Contract source | [contracts/outage_bond.py](contracts/outage_bond.py) |
 | Frontend source | [apps/outagebond-web](apps/outagebond-web) |
