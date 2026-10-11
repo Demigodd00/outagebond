@@ -9,7 +9,8 @@ const steps = [
 ];
 
 export default function HowItWorksPage() {
-  return <section className="how-page"><p className="eyebrow">PROTOCOL GUIDE</p><h1>From incident report<br />to settled claim.</h1><p className="status-lede">The frontend submits exact terms and shows finalized contract state. GenLayer handles the evidence judgment and the resulting escrow transition.</p>
+  return <section className="how-page"><p className="eyebrow">OUTAGEBOND EXPLAINED</p><h1>A funded promise<br />for service outages.</h1><p className="status-lede">A provider promises a named customer a fixed test-GEN payment if a covered service goes down long enough. The provider funds that promise first. After an outage, the customer files a claim with two public reports. GenLayer validators check the reports against the rule; if the claim qualifies, the customer can collect. You can explore the app without connecting a wallet.</p>
+    <Link className="button button-secondary" href="/tour">See a completed test claim ↗</Link>
     <div className="how-steps">{steps.map(([number, title, copy]) => <article key={number}><span>{number}</span><div><h2>{title}</h2><p>{copy}</p></div></article>)}</div>
     <div className="terms-note"><strong>Evidence has limits</strong><span>Different report hosts help separate the sources, but do not prove common ownership or operational independence. Pages can change; OutageBond records their submitted URLs and consensus extraction, not a permanent archive of their original bytes. StudioNet GEN has no monetary value.</span></div>
     <Link className="button button-primary" href="/coverage/new">Create coverage ↗</Link>

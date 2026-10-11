@@ -8,7 +8,7 @@ import TransactionRecovery from "./TransactionRecovery";
 import { useWallet } from "./WalletProvider";
 
 const routes = [
-  { href: "/", label: "Overview" },
+  { href: "/", label: "About" },
   { href: "/tour", label: "Guided tour" },
   { href: "/coverage/new", label: "Create coverage" },
   { href: "/status", label: "Protocol status" },
@@ -31,6 +31,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       <TransactionRecovery />
       {children}
     </div></main>
-    <footer><div className="site-shell footer-inner"><Link className="brand" href="/"><span className="brand-mark">OB</span><span>OutageBond<small>by demigodd00 · StudioNet</small></span></Link><p>Independent incident reports. Validator-settled claims.</p><Link href="/status">Protocol status ↗</Link></div></footer>
+    <footer><div className="site-shell footer-inner"><Link className="brand" href="/"><span className="brand-mark">OB</span><span>OutageBond<small>by demigodd00 · StudioNet</small></span></Link><p>Pre-funded outage promises. Validator-checked claims.</p><Link href="/status">Protocol status ↗</Link></div></footer>
   </>;
 }

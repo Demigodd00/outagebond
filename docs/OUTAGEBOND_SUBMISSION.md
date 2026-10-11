@@ -1,8 +1,11 @@
 # OutageBond — reviewer guide
 
+OutageBond is an outage-compensation web app: a service provider names a customer, sets a minimum outage duration and payout, and funds the promise before an incident. The customer can later submit an outage with two public reports. GenLayer validators check the reports against the agreed rule; an eligible customer collects the reserved payout. The [homepage introduction](https://outagebond.vercel.app/#introduction) explains the product, the roles, and a concrete test case before showing coverage records. No wallet is needed to read it.
+
 ## Open the product
 
 - [Live app](https://outagebond.vercel.app)
+- [Plain-language introduction](https://outagebond.vercel.app/#introduction)
 - [Guided live-record tour](https://outagebond.vercel.app/tour)
 - [Finalized protocol status](https://outagebond.vercel.app/status)
 - [Policy guide](https://outagebond.vercel.app/how-it-works)

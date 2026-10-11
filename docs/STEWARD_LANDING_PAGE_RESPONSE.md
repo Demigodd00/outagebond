@@ -1,0 +1,7 @@
+# Response to the October 11, 2026 landing-page request
+
+The steward asked for a website that explains what OutageBond is building, not just a collection of evidence links. The homepage now leads with the product promise in plain language and includes a prominent **What is OutageBond?** introduction before any coverage records. It explains the provider, customer, and validator roles; the pre-funded promise; how a claim is filed and checked; and what happens for eligible versus non-paying claims. A concrete 60-second/90-second/0.001 test-GEN example connects the explanation to the working demo. The synthetic-source disclosure remains explicit. The detailed guide is also introduced in plain language.
+
+Suggested Portal response:
+
+> We revised the live OutageBond homepage to explain the product before showing evidence. Start at https://outagebond.vercel.app/ and select “What is OutageBond?” (or open https://outagebond.vercel.app/#introduction). The introduction explains who the app is for, what providers fund and promise, how customers file claims, how GenLayer validators check two reports, and when a customer can collect. It includes a concrete funded 60-second coverage / 90-second incident / 0.001 test-GEN payout example. The guided tour remains available for reviewers who want to inspect the exact StudioNet records. No wallet is needed to understand or explore the app, and the synthetic test reports are clearly disclosed.

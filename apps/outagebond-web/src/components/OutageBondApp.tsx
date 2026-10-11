@@ -30,30 +30,45 @@ export default function OutageBondApp() {
   return <>
     <section className="hero">
       <div className="hero-copy">
-        <p className="eyebrow"><span className="pulse-dot" />PUBLIC INCIDENTS · SETTLED ON GENLAYER</p>
+        <p className="eyebrow"><span className="pulse-dot" />PRE-FUNDED OUTAGE COMPENSATION · GENLAYER STUDIONET</p>
         <h1>When service<br /><em>goes dark.</em></h1>
-        <p className="hero-summary">Providers lock service credits in public. A customer submits a historical outage with two independent reports. GenLayer validators compare the evidence and the compensation rule.</p>
-        <div className="hero-actions"><Link className="button button-primary button-large" href="/tour">Take the guided tour <span>↗</span></Link><Link className="button button-secondary button-large" href="/coverage/new">Create coverage</Link></div>
-        <p className="environment-note">{CONTRACT_READY ? "Connected to the configured StudioNet contract" : "Preview mode · transactions remain disabled until deployment"}</p>
+        <p className="hero-summary"><strong>OutageBond lets a service provider pre-fund a payout for a named customer.</strong> If the service goes down long enough, GenLayer validators check two public reports against the rule. An eligible customer can then collect.</p>
+        <div className="hero-actions"><a className="button button-primary button-large" href="#introduction">What is OutageBond? <span>↓</span></a><Link className="button button-secondary button-large" href="/tour">See a real test case ↗</Link></div>
+        <p className="environment-note">No wallet needed to explore. {CONTRACT_READY ? "Transactions use StudioNet test GEN, which has no monetary value." : "Preview mode · transactions remain disabled until deployment."}</p>
       </div>
-      <div className="hero-visual" aria-label="Two independent outage reports converging on a compensation decision">
+      <div className="hero-visual" aria-label="Example: a 90-second outage exceeds a 60-second minimum and qualifies for a pre-funded payout">
         <div className="visual-orbit orbit-a" /><div className="visual-orbit orbit-b" />
         <div className="event-card">
-          <div className="event-top"><span><i /> ILLUSTRATIVE INCIDENT</span><small>NOT LIVE DATA</small></div>
-          <strong className="event-title">API unavailable</strong>
+          <div className="event-top"><span><i /> SYNTHETIC TEST INCIDENT</span><small>EXAMPLE FROM CLAIM OBC-2</small></div>
+          <strong className="event-title">Covered API outage</strong>
           <div className="timeline"><span /><span /><span /><span className="active" /><span className="active" /><span className="active" /><span /><span /></div>
-          <div className="event-window"><span>14:02:10</span><b>6m 12s</b><span>14:08:22</span></div>
-          <div className="source-pair"><div><small>OPERATOR REPORT</small><strong>Confirmed</strong></div><div><small>INDEPENDENT MONITOR</small><strong>Confirmed</strong></div></div>
+          <div className="event-window"><span>Minimum: 60 sec</span><b>90 sec outage</b><span>Qualifies</span></div>
+          <div className="source-pair"><div><small>REPORT HOST 1</small><strong>Outage confirmed</strong></div><div><small>REPORT HOST 2</small><strong>Outage confirmed</strong></div></div>
         </div>
-        <div className="consensus-chip"><span>✓</span><div><small>DERIVED OUTCOME</small><strong>Eligible for 0.01 GEN</strong></div></div>
-        <div className="evidence-chip"><small>SAME WINDOW · SAME VERDICT</small><strong>Validator consensus</strong></div>
+        <div className="consensus-chip"><span>✓</span><div><small>FINAL OUTCOME</small><strong>0.001 test GEN paid</strong></div></div>
+        <div className="evidence-chip"><small>REPORTS AGREE · RULE MET</small><strong>GenLayer validator decision</strong></div>
       </div>
+    </section>
+
+    <section id="introduction" className="introduction" aria-labelledby="introduction-title">
+      <div className="introduction-heading"><p className="eyebrow">START HERE</p><h2 id="introduction-title">What is OutageBond?</h2><p>It is an outage-compensation app, not an outage-monitoring dashboard. A service provider can offer a named customer a fixed payment if a covered service is unavailable for long enough. The provider puts the funds into a GenLayer contract first, so the promise is backed before anyone files a claim.</p></div>
+      <div className="introduction-cards">
+        <article><span>FOR PROVIDERS</span><h3>Make a funded promise</h3><p>Choose the service, customer, minimum outage length, payout, and number of claims. Lock enough test GEN to cover those promises.</p></article>
+        <article><span>FOR CUSTOMERS</span><h3>Claim after an outage</h3><p>If the service goes down, submit the time window and two public report links. You do not have to rely on the provider to approve your claim.</p></article>
+        <article><span>FOR EVERYONE</span><h3>Check the result</h3><p>GenLayer validators read both pages and apply the same rule. A qualifying claim reserves a payout; the customer collects it. Short or unverified claims do not pay.</p></article>
+      </div>
+      <div className="introduction-example"><div><span className="eyebrow">A CONCRETE EXAMPLE</span><h3>60-second minimum. 90-second outage. 0.001 test GEN paid.</h3><p>Our synthetic StudioNet case shows the full path: coverage was funded, two reports described the same outage, validators found the claim eligible, and the customer collected the pre-funded payout. The reports are demo-author controlled; this is a product demonstration, not proof of a real-world outage.</p></div><Link className="button button-primary" href="/tour">Walk through this case ↗</Link></div>
     </section>
 
     <section className="value-strip" aria-label="Protocol guarantees">
       <div><span>01</span><strong>Two distinct report hosts</strong></div>
       <div><span>02</span><strong>Threshold result must agree</strong></div>
       <div><span>03</span><strong>Escrow and payout onchain</strong></div>
+    </section>
+
+    <section className="how-grid">
+      <div><p className="eyebrow">THE CLAIM FLOW</p><h2>From promise to payout.</h2><p>The provider commits the terms before an incident. The customer submits a completed outage and two public report links. Validators check the reports against the terms; only an eligible claim can be collected.</p><Link href="/tour" className="text-link">Walk through the live test case ↗</Link><br /><Link href="/how-it-works" className="text-link">Read the detailed protocol ↗</Link></div>
+      <div className="flow-list"><div><span>01</span><p><strong>Provider creates coverage</strong><small>Names the customer and funds the promised payout before an outage.</small></p></div><div><span>02</span><p><strong>Customer files a claim</strong><small>Submits the outage window and two public report URLs.</small></p></div><div><span>03</span><p><strong>Validators check the reports</strong><small>They fetch both pages and must agree that the coverage rule is met.</small></p></div><div><span>04</span><p><strong>Customer collects, if eligible</strong><small>Short or unverified incidents do not pay; reserved funds are released.</small></p></div></div>
     </section>
 
     <section id="coverage" className="coverage-section">
@@ -70,9 +85,5 @@ export default function OutageBondApp() {
             </article>)}</div>}
     </section>
 
-    <section className="how-grid">
-      <div><p className="eyebrow">THE CLAIM FLOW</p><h2>Make outages<br />settle on evidence.</h2><p>Coverage rules and collateral are committed before an incident. The claim keeps its UTC window and both report links fixed while validators independently extract the facts.</p><Link href="/tour" className="text-link">Walk through the live records ↗</Link><br /><Link href="/how-it-works" className="text-link">Read how it works ↗</Link></div>
-      <div className="flow-list"><div><span>01</span><p><strong>Provider registers coverage</strong><small>Collateral, service, region, minimum duration and payout are fixed onchain.</small></p></div><div><span>02</span><p><strong>Beneficiary submits two sources</strong><small>One service report and a second report from a different public host.</small></p></div><div><span>03</span><p><strong>Anyone calls attest()</strong><small>Validators re-fetch both pages and must agree on the derived eligibility result.</small></p></div><div><span>04</span><p><strong>Beneficiary collects</strong><small>Eligible payouts remain reserved for 30 days, then can be returned if unclaimed.</small></p></div></div>
-    </section>
   </>;
 }

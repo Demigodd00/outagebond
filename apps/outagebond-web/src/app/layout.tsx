@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "OutageBond by demigodd00", template: "%s · OutageBond" },
-  description: "Service incident compensation backed by collateral and independently verified on GenLayer StudioNet.",
+  description: "OutageBond lets service providers pre-fund outage compensation, then lets customers claim when GenLayer validators verify a covered incident.",
   applicationName: "OutageBond",
   authors: [{ name: "demigodd00" }],
   creator: "demigodd00",
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "OutageBond",
     title: "OutageBond by demigodd00",
-    description: "Two incident reports. One validator-verified compensation outcome.",
+    description: "Pre-funded service-outage compensation checked by GenLayer validators.",
   },
-  twitter: { card: "summary_large_image", title: "OutageBond", description: "Incident claims settled by GenLayer validators." },
+  twitter: { card: "summary_large_image", title: "OutageBond", description: "Pre-funded outage compensation with validator-checked claims." },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#0a1015" };
